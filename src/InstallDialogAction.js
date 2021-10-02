@@ -7,7 +7,7 @@ function DialogActionWithInstructions(props) {
   return (
     <Box width="100%" display="flex" flexDirection="column">
       <Box>
-        <Typography variant="subtitle1">To install this app:</Typography>
+        <Typography variant="subtitle1">כדי להתקין את האפליקציה הזו:</Typography>
         <ul>
           <li>
             <span style={{ display: "flex", alignItems: "center" }}>{props.action1}</span>
@@ -16,7 +16,7 @@ function DialogActionWithInstructions(props) {
         </ul>
       </Box>
       <Box width="100%" textAlign="right">
-        <Button onClick={props.onSubmit}>Ok</Button>
+        <Button onClick={props.onSubmit}>בסדר</Button>
       </Box>
     </Box>
   );
@@ -28,9 +28,9 @@ export default function InstallDialogAction(props) {
       <DialogActions>
         {props.platform === platforms.NATIVE && (
           <>
-            <Button onClick={props.onClose}>Cancel</Button>
+            <Button onClick={props.onClose}>לְבַטֵל</Button>
             <Button onClick={props.onSubmit} color="primary" variant="contained" disableElevation>
-              Install
+              התקן
             </Button>
           </>
         )}
@@ -62,11 +62,11 @@ export default function InstallDialogAction(props) {
           <DialogActionWithInstructions
             action1={
               <>
-                Tap the menu button:
+                הקש על כפתור התפריט:
                 <MenuIcon />
               </>
             }
-            action2="then tap 'Install'"
+            action2="לאחר מכן הקש 'התקן'"
             onSubmit={props.onSubmit}
           />
         )}
@@ -74,13 +74,13 @@ export default function InstallDialogAction(props) {
           <DialogActionWithInstructions
             action1={
               <>
-                Tap the menu button:
+                הקש על כפתור התפריט:
                 <MenuIcon />
               </>
             }
             action2={
               <>
-                then tap &nbsp;'
+                לאחר מכן הקש &nbsp;'
                 <OperaA2HSIcon />
                 Home screen'
               </>
@@ -90,7 +90,7 @@ export default function InstallDialogAction(props) {
         )}
         {props.platform === platforms.OTHER && (
           <Box width="100%" display="flex" flexDirection="column">
-            <Box>Unfortunately the install feature is not supported by your browser.</Box>
+            <Box>למרבה הצער, תכונת ההתקנה אינה נתמכת על ידי הדפדפן שלך.</Box>
             <Box width="100%" textAlign="right">
               <Button onClick={props.onClose}>Ok</Button>
             </Box>

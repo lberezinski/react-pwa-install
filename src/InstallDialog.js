@@ -15,7 +15,6 @@ export default function InstallDialog(props) {
           )}
           {!!props.features && (
             <Box>
-              <Typography variant="subtitle1">Key Features:</Typography>
               <Typography variant="body2" component="div">
                 {props.features}
               </Typography>
@@ -24,7 +23,6 @@ export default function InstallDialog(props) {
         </Box>
         {!!props.description && (
           <>
-            <Typography variant="subtitle1">Description:</Typography>
             <Typography variant="body2" component="div">
               {props.description}
             </Typography>
